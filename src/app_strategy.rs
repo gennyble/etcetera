@@ -157,10 +157,10 @@ macro_rules! create_strategies {
 cfg_select! {
     target_os = "windows" => {
         create_strategies!(Windows, Windows);
-    },
+    }
     any(target_os = "macos", target_os = "ios") => {
         create_strategies!(Apple, Xdg);
-    },
+    }
     _ => {
         create_strategies!(Xdg, Xdg);
     }
